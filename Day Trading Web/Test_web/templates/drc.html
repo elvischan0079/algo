@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+<link rel="stylesheet" href="static/drc.css">
+{% block body %}
+
+<header>
+    <h2>Daily Report Card</h2>
+</header>
+<section>
+    <nav>
+        <ul>
+        <li><a href="#">Trade-life Balance</a></li>
+        <li><a href="#">Trading Improvement</a></li>
+        <li><a href="#">Summary of Daily Report Card</a></li>
+        </ul>
+    </nav>
+    <form id="container">
+        <div id="left">
+            <h1>Goal:</h1>
+            <label for="goal_name">Name:</label>
+            <input class="inputLine",id="goal_name",name="goal_name"></input>
+            <label for="goal_type">Type:</label>
+            <input class="inputLine",id="goal_type",name="goal_type"></input>
+            <label for="goal_start">Start:</label>
+            <input class="inputLine",id="goal_start",name="goal_start"></input>
+            <label for="goal_end">End:</label>
+            <input class="inputLine",id="goal_end",name="goal_end"></input>
+            <label for="goal_period">Period:</label>
+            <input class="inputLine",id="goal_period",name="goal_period"></input>
+        </div>
+        <div id="middle">
+            <h1>Time Slots:</h1>
+            <input type="checkbox" name="time_slots" value="Pre-market">Pre-market</input><br>
+            <input type="checkbox" name="time_slots" value="Market Open">Market Open</input><br>
+            <input type="checkbox" name="time_slots" value="Market Mid">Market Mid</input><br>
+            <input type="checkbox" name="time_slots" value="Market Close">Market Close</input><br>
+            <input type="checkbox" name="time_slots" value="Post-market">Post-market</input><br>
+        </div>
+        <div id="right">
+            <label for="goal_description"><h1>Goal Description:</h1></label>
+            <input class="inputSmall",id="goal_description",name="goal_description"></input>
+        </div>
+    </form>  
+    <form>
+        <h1>Pre-market</h1>
+        <label for="pm_grade">Grade:</label>
+        <input class="inputLine",id="pm_grade",name="pm_grade"></input>
+        <label for="pm_review">Review:</label>
+        <input class="inputSmall",id="pm_review",name="pm_review"></input>
+    </form>
+    <form>
+        <h1>Market Open</h1>
+        <label for="mo_grade">Grade:</label>
+        <input class="inputLine",id="mo_grade",name="mo_grade"></input>
+        <label for="mo_review">Review:</label>
+        <input class="inputSmall",id="mo_review",name="mo_review"></input>
+    </form>
+    <form>
+        <h1>Market Mid</h1>
+        <label for="mm_grade">Grade:</label>
+        <input class="inputLine",id="mm_grade",name="mm_grade"></input>
+        <label for="mm_review">Review:</label>
+        <input class="inputSmall",id="mm_review",name="mm_review"></input>
+    </form>
+    <form>
+        <h1>Market Close</h1>
+        <label for="mc_grade">Grade:</label>
+        <input class="inputLine",id="mc_grade",name="mc_grade"></input>
+        <label for="mc_review">Review:</label>
+        <input class="inputSmall",id="mc_review",name="mc_review"></input>
+    </form>
+    <form>
+        <h1>Post-market</h1>
+        <label for="pom_grade">Grade:</label>
+        <input class="inputLine",id="pom_grade",name="pom_grade"></input>
+        <label for="pom_review">Review:</label>
+        <input class="inputSmall",id="pom_review",name="pom_review"></input>
+    </form>
+    <form class = "overall">
+        <h1>Overall Review</h1>
+        <label for="impro">Improvement:</label>
+        <input class="inputSmall",id="impro",name="impro"></input>
+        <label for="learn">Learning:</label>
+        <input class="inputSmall",id="learn",name="learn"></input>
+
+    </form>    
+</section>
+
+<footer>
+<p>Footer</p>
+<input type="submit" value="Confirm">
+</footer>
+{% endblock body %}
